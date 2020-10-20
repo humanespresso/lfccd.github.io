@@ -9,12 +9,6 @@
         <script id="jsbin-javascript">
 var fixturesXY	=	'Sat,11,Jan,2020,17:30,Tottenham Hotspur (PL-A);Sun,19,Jan,2020,16:30,Manchester United (PL-H);Thu,23,Jan,2020,Wolverhampton Wanderers (PL-A);Wed,29,Jan,2020,19:45,West Ham United (PL-A)';
 
-var fixturesXX	=	'Sun,5,Jan,2020,14:00,Brighton & Hove Albion (WSL-A);sun,12,Jan,2020,12:00,Manchester United (WSL-H);Sun,19,Jan,2020,15:00,Bristol City (WSL-A)';
-
-var fixturesU23	=	'Sun,5,Jan,2020,13:00,Manchester City (PL2-A);Wed,8,Jan,2020,19:00,Athletic Club (PL Cup-H);Mon,13,Jan,2020,19:00,Southampton (PL2-H);Fri,17,Jan,2020,19:00,Wigan Athletic (PL Cup-A);Wed,29,Jan,2020,19:00,WOlverhampton Wanderers (PL Cup-A);';	
-
-var fixturesU18	=	'Sat,4,Jan,2020,11:00,Blackburn Rovers (PL U18-H);Sat,11,Jan,2020,11:00,Stoke City (PL U18-A);Sat,18,Jan,2020,11:00,Manchester United (PL U18-A);Sat,25,Jan,2020,12:30,Sunderland (PL U18-H)';	
-	
 function fixture(dateStr, opp) {
 	this.date			=	new Date(dateStr);
 	this.dateStr		=	dateStr;
@@ -127,28 +121,6 @@ function updateClock() {
     document.getElementById("secondsMen").innerHTML    = ('0' + m.seconds).slice(-2);
     document.getElementById("opponentMen").innerHTML    = m.opponent;
     document.getElementById("dateMen").innerHTML        = m.date;
-;
-	
-	document.getElementById("daysWomen").innerHTML		= w.days;
-	document.getElementById("hoursWomen").innerHTML	= ('0' + w.hours).slice(-2);
-	document.getElementById("minutesWomen").innerHTML	= ('0' + w.minutes).slice(-2);
-	document.getElementById("secondsWomen").innerHTML	= ('0' + w.seconds).slice(-2);
-	document.getElementById("opponentWomen").innerHTML	= w.opponent;
-	document.getElementById("dateWomen").innerHTML		= w.date;
-  
-    document.getElementById("daysU23").innerHTML		= U23.days;
-	document.getElementById("hoursU23").innerHTML	= ('0' + U23.hours).slice(-2);
-	document.getElementById("minutesU23").innerHTML	= ('0' + U23.minutes).slice(-2);
-	document.getElementById("secondsU23").innerHTML	= ('0' + U23.seconds).slice(-2);
-	document.getElementById("opponentU23").innerHTML	= U23.opponent;
-	document.getElementById("dateU23").innerHTML		= U23.date;
-  
-    document.getElementById("daysU18").innerHTML		= U18.days;
-	document.getElementById("hoursU18").innerHTML	= ('0' + U18.hours).slice(-2);
-	document.getElementById("minutesU18").innerHTML	= ('0' + U18.minutes).slice(-2);
-	document.getElementById("secondsU18").innerHTML	= ('0' + U18.seconds).slice(-2);
-	document.getElementById("opponentU18").innerHTML	= U18.opponent;
-	document.getElementById("dateU18").innerHTML		= U18.date;
 }
 
 var timeinterval = setInterval(updateClock, 1000);
@@ -328,9 +300,8 @@ aside.sidebar .box.schedule article section a:hover{
 		<aside class="sidebar" id="sidebar-left">
 
 					<!-- CATEGORY TWO -->
-			<div class="category">
-			    <h1>NEXT MATCH</h1>
-			    <div class="box schedule">
+<div class="category">
+<div class="box schedule">
 <article>
 <img src="https://i.imgur.com/Y2E6iRU.jpg" />
 <div class="countdown">
@@ -354,97 +325,8 @@ aside.sidebar .box.schedule article section a:hover{
 </div>
 <br>
 <h3><div class="list-title2" id="dateMen">DATE</div></h3><br>
-<h3><div class="list-title2" style="font-size:0.6em"><b>PL:</b> 1st | <b>UCL :</b> R16 | <b>FA Cup :</b> 3rd Round | <b>CWC:</b> Winners
-<br><b>EFL Cup :</b> Eliminated | <b>Super Cup:</b> Winners</div></h3>
 </div>
 </div>
-</article>
-
-<article>
-<img src="https://i.imgur.com/xGY7xoR.jpg" />
-<div class="countdown">
-<div>  
-<section><h2><div class="opponent" id="opponentWomen">Opponent</div></h2>
-<div class="card">
-<div class="list-title" id="daysWomen">00</div>
-<div class="list-title">Days</div>
-</div> ; 
-<div class="card">
-<div class="list-title" id="hoursWomen">00</div>
-<div class="list-title">Hrs</div>
-</div> ; 
-<div class="card">
-<div class="list-title" id="minutesWomen">00</div>
-<div class="list-title">Mins</div>
-</div> ; 
-<div class="card">
-<div class="list-title" id="secondsWomen">00</div>
-<div class="list-title">Secs</div>
-</div>
-<br>
-<h3><div class="list-title2" id="dateWomen">DATE</div></h3><br>
-<h3><div class="list-title2" style="font-size:0.6em"><b>WSL:</b> 11th | <b>League Cup :</b> Eliminated | <b>FA Cup :</b> Did not start</div></h3>
-</div>
-</div>
-</section>
-</article>
-
-<article>
-<img src="https://i.imgur.com/QHuyIpe.jpg" />
-<div class="countdown">
-<div>  
-<section><h2><div class="opponent" id="opponentU23">Opponent</div></h2>
-<div class="card">
-<div class="list-title" id="daysU23">00</div>
-<div class="list-title">Days</div>
-</div> ; 
-<div class="card">
-<div class="list-title" id="hoursU23">00</div>
-<div class="list-title">Hrs</div>
-</div> ; 
-<div class="card">
-<div class="list-title" id="minutesU23">00</div>
-<div class="list-title">Mins</div>
-</div> ; 
-<div class="card">
-<div class="list-title" id="secondsU23">00</div>
-<div class="list-title">Secs</div>
-</div>
-<br>
-<h3><div class="list-title2" id="dateU23">DATE</div></h3> <br>
-<h3><div class="list-title2" style="font-size:0.6em"><b>PL:</b> 1st | <b>PL Int Cup :</b> Group Stage | <b>PL Cup :</b> Group Stage | <b>EFL :</b> Eliminated</div></h3> 
-</div>
-</div>
-</section>
-</article>
-
-<article>
-<img src="https://i.imgur.com/PyzJXqB.jpg" />
-<div class="countdown">
-<div>  
-<section><h2><div class="opponent" id="opponentU18">Opponent</div></h2>
-<div class="card">
-<div class="list-title" id="daysU18">00</div>
-<div class="list-title">Days</div>
-</div> ; 
-<div class="card">
-<div class="list-title" id="hoursU18">00</div>
-<div class="list-title">Hrs</div>
-</div> ; 
-<div class="card">
-<div class="list-title" id="minutesU18">00</div>
-<div class="list-title">Mins</div>
-</div> ; 
-<div class="card">
-<div class="list-title" id="secondsU18">00</div>
-<div class="list-title">Secs</div>
-</div>
-<br>
-<h3><div class="list-title2" id="dateU18">DATE</div></h3> <br>
-<h3><div class="list-title2" style="font-size:0.6em"><b>PL:</b> 2nd | <b>UYCL :</b> R16 | <b>FA Cup :</b> Eliminated | <b>PL Cup :</b> Eliminated</div></h3> 
-</div>
-</div>
-</section>
 </article>
 
 </div>
