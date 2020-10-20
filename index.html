@@ -10,9 +10,9 @@
 var fixturesXY	=	'Sat,11,Jan,2020,17:30,Tottenham Hotspur (PL-A);Sun,19,Jan,2020,16:30,Manchester United (PL-H);Thu,23,Jan,2020,Wolverhampton Wanderers (PL-A);Wed,29,Jan,2020,19:45,West Ham United (PL-A)';
 
 function fixture(dateStr, opp) {
-	this.date			=	new Date(dateStr);
+	this.date		=	new Date(dateStr);
 	this.dateStr		=	dateStr;
-	this.opp			=	opp;
+	this.opp		=	opp;
 	this.lineStr 		= 	dateStr + opp;
 }
 
@@ -129,7 +129,6 @@ updateClock();
 <style type="text/css">
 #main{
 	position: relative;
-	overflow: hidden;
 	margin: 0 auto;
 	width: 90%;
 	background:url("https://edition.cnn.com/interactive/2020/04/sport/liverpoolpremierleaguetitle/media/images/hero-lg.jpg");
